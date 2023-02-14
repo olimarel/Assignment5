@@ -49,4 +49,10 @@ public class IntStackTest {
         assertEquals(10, stack.pop());
     }
 
+
+    @Test(expected = ArrayIndexOutOfBoundsException.class)
+    public void testPopOnEmptyStack() {
+        stack.pop();
+    }
+
 }
