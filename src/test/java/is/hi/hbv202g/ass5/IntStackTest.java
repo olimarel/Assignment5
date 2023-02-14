@@ -23,7 +23,7 @@ public class IntStackTest {
     public void testFullStackIsFull() {
         int N = stack.getCapacity();
 
-        for (int i = 0; i < N; i++) {
+        for (int i = 1; i <= N; i++) {
             stack.push(i);
         }
 
@@ -77,6 +77,4 @@ public class IntStackTest {
         stack.push(1);
         assertFalse(stack.isEmpty());
     }
-
-
 }
