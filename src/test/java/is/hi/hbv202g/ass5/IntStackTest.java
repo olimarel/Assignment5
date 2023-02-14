@@ -31,4 +31,17 @@ public class IntStackTest {
         assertTrue(stack.isFull());
     }
 
+    @Test
+    public void testFullStackIsAlmostFull() {
+        int N = stack.getCapacity();
+
+        for (int i = 0; i < N; i++) {
+            stack.push(i);
+        }
+
+        stack.pop();
+
+        assertFalse(stack.isFull());
+    }
+
 }
