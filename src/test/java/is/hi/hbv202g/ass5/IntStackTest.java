@@ -31,10 +31,10 @@ public class IntStackTest {
     }
 
     @Test
-    public void testFullStackIsAlmostFull() {
+    public void testAlmostFullStack() {
         int N = stack.getCapacity();
 
-        for (int i = 0; i < N; i++) {
+        for (int i = 1; i <= N; i++) {
             stack.push(i);
         }
 
@@ -59,12 +59,24 @@ public class IntStackTest {
     public void testPushOnFullStack() {
         int N = stack.getCapacity();
 
-        for (int i = 0; i < N; i++) {
+        for (int i = 1; i <= N; i++) {
             stack.push(i);
         }
 
-        stack.push(10);
+        stack.push(11);
 
     }
+
+    @Test
+    public void testEmptyStackIsEmpty() {
+        assertTrue(stack.isEmpty());
+    }
+
+    @Test
+    public void testAlmostEmptyStack() {
+        stack.push(1);
+        assertFalse(stack.isEmpty());
+    }
+
 
 }
