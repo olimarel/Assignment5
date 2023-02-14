@@ -55,4 +55,16 @@ public class IntStackTest {
         stack.pop();
     }
 
+    @Test(expected = ArrayIndexOutOfBoundsException.class)
+    public void testPushOnFullStack() {
+        int N = stack.getCapacity();
+
+        for (int i = 0; i < N; i++) {
+            stack.push(i);
+        }
+
+        stack.push(10);
+
+    }
+
 }
